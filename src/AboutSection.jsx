@@ -591,16 +591,7 @@ export default function AboutSection({ onExploreClick }) {
           </BlurReveal>
 
           {/* Philosophy Highlight Tag */}
-          <motion.div
-            className="ftr-philosophy-pill"
-            initial={{ opacity: 0, x: -12 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1], delay: 0.18 }}
-          >
-            <span>🎯</span>
-            <span>Philosophy: &ldquo;Solution First, Product Next&rdquo; &mdash; A trusted problem-solving partner.</span>
-          </motion.div>
+         
 
           {/* Button (EXPLORE MORE) */}
           <motion.button

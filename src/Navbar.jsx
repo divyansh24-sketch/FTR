@@ -6,13 +6,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 /**
  * =========================================================================
- * FTR - 100% AGERO STYLE FLOATING CAPSULE NAVBAR (Navbar.jsx)
+ * FTR - FLOATING CAPSULE NAVBAR (Navbar.jsx)
  * =========================================================================
- * - Brand: Official "FTR (✓) First Time Right" Logo
- * - Center: Light gray pill track (#f1f1f4) with smooth sliding white pill
- *   Links: Solutions | Why FTR | Products | Our Clients | Testimonials | FAQ
- * - Right: Circular Moon Theme button (☾) + Solid Black CTA "Book Site Diagnosis ↗"
- * - Responsive: Full mobile drawer menu included
+ * - Balanced Height: 56px
+ * - Sleek Width: 860px
+ * - Clean transparent track (no gray border behind Solutions -> FAQ)
  * =========================================================================
  */
 
@@ -75,12 +73,12 @@ export function Navbar({
         /* ---------------- Floating Wrapper ---------------- */
         .ftr-agero-nav-wrapper {
           position: fixed;
-          top: 18px;
+          top: 16px;
           left: 0;
           right: 0;
           width: 100%;
           z-index: 9999;
-          padding: 0 20px;
+          padding: 0 16px;
           box-sizing: border-box;
           display: flex;
           justify-content: center;
@@ -92,25 +90,25 @@ export function Navbar({
         .ftr-floating-capsule {
           pointer-events: auto;
           width: 100%;
-          max-width: 1120px;
-          height: 60px;
+          max-width: 860px;
+          height: 56px; /* Height increased from 50px to 56px */
           background: rgba(255, 255, 255, 0.94);
           backdrop-filter: blur(16px);
           -webkit-backdrop-filter: blur(16px);
           border: 1px solid rgba(0, 0, 0, 0.08);
           border-radius: 9999px;
-          box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+          box-shadow: 0 4px 18px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 6px 10px 6px 18px;
+          padding: 5px 8px 5px 16px;
           box-sizing: border-box;
           transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .ftr-floating-capsule.is-scrolled {
           background: rgba(255, 255, 255, 0.98);
-          box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.1), 0 3px 8px -2px rgba(0, 0, 0, 0.04);
           border-color: rgba(0, 0, 0, 0.12);
         }
 
@@ -128,11 +126,11 @@ export function Navbar({
           text-decoration: none;
           user-select: none;
           flex-shrink: 0;
-          padding-right: 6px;
+          padding-right: 4px;
         }
 
         .ftr-brand-logo-img {
-          height: 38px;
+          height: 34px;
           width: auto;
           object-fit: contain;
           display: block;
@@ -145,34 +143,34 @@ export function Navbar({
         }
 
         .ftr-brand-svg-logo {
-          height: 38px;
+          height: 34px;
           width: auto;
           display: block;
           transition: transform 0.2s ease;
         }
 
-        /* ---------------- Center Gray Capsule Track ---------------- */
+        /* ---------------- Center Track (Clean & Transparent) ---------------- */
         .ftr-center-capsule-track {
           display: flex;
           align-items: center;
-          background: #f1f1f4;
-          border-radius: 9999px;
-          padding: 4px;
+          background: transparent;
+          border: none;
+          padding: 0;
           gap: 2px;
           position: relative;
         }
 
         .ftr-floating-capsule.is-dark .ftr-center-capsule-track {
-          background: #27272a;
+          background: transparent;
         }
 
         .ftr-nav-pill-item {
           position: relative;
           background: transparent;
           border: none;
-          padding: 7px 16px;
+          padding: 6px 13px;
           font-size: 13.5px;
-          font-weight: 550;
+          font-weight: 500;
           color: #52525b;
           cursor: pointer;
           border-radius: 9999px;
@@ -193,7 +191,7 @@ export function Navbar({
 
         .ftr-nav-pill-item.is-active {
           color: #09090b;
-          font-weight: 650;
+          font-weight: 600;
         }
 
         .ftr-floating-capsule.is-dark .ftr-nav-pill-item {
@@ -210,83 +208,41 @@ export function Navbar({
           z-index: 2;
         }
 
-        /* Smooth Sliding Active White Pill */
+        /* Active Pill Indicator */
         .ftr-sliding-white-indicator {
           position: absolute;
           inset: 0;
-          background: #ffffff;
+          background: #f4f4f6;
           border-radius: 9999px;
-          box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.08), 0 0.5px 1.5px rgba(0, 0, 0, 0.04);
           z-index: 1;
         }
 
         .ftr-floating-capsule.is-dark .ftr-sliding-white-indicator {
-          background: #3f3f46;
-          box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.3);
+          background: #27272a;
         }
 
-        /* ---------------- Right: Theme Toggle & Solid Black CTA ---------------- */
+        /* ---------------- Right: Solid Black CTA ---------------- */
         .ftr-right-actions {
           display: flex;
           align-items: center;
-          gap: 10px;
+          gap: 8px;
           flex-shrink: 0;
         }
 
-        /* Circular Moon Theme Button */
-        .ftr-circle-theme-btn {
-          width: 38px;
-          height: 38px;
-          border-radius: 50%;
-          background: transparent;
-          border: 1px solid rgba(0, 0, 0, 0.1);
-          color: #27272a;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-          outline: none;
-          padding: 0;
-        }
-
-        .ftr-circle-theme-btn:hover {
-          background: #f4f4f7;
-          border-color: rgba(0, 0, 0, 0.2);
-          transform: scale(1.05);
-          color: #09090b;
-        }
-
-        .ftr-circle-theme-btn:active {
-          transform: scale(0.96);
-        }
-
-        .ftr-floating-capsule.is-dark .ftr-circle-theme-btn {
-          color: #f4f4f5;
-          border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .ftr-floating-capsule.is-dark .ftr-circle-theme-btn:hover {
-          background: #3f3f46;
-          border-color: rgba(255, 255, 255, 0.3);
-          color: #ffffff;
-        }
-
-        /* Solid Black Pill CTA Button */
         .ftr-capsule-cta-btn {
           background: #09090b;
           color: #ffffff;
           border: 1px solid #09090b;
           border-radius: 9999px;
-          padding: 9px 18px 9px 20px;
-          font-size: 13.5px;
-          font-weight: 650;
+          padding: 8px 16px 8px 18px;
+          font-size: 13px;
+          font-weight: 600;
           display: inline-flex;
           align-items: center;
-          gap: 7px;
+          gap: 6px;
           cursor: pointer;
           transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
           font-family: inherit;
           white-space: nowrap;
           outline: none;
@@ -301,7 +257,7 @@ export function Navbar({
           background: #18181b;
           border-color: #18181b;
           transform: translateY(-1px);
-          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
         }
 
         .ftr-capsule-cta-btn:hover .ftr-arrow-icon {
@@ -326,8 +282,8 @@ export function Navbar({
         /* Mobile Hamburger Toggle */
         .ftr-hamburger-toggle-btn {
           display: none;
-          width: 38px;
-          height: 38px;
+          width: 36px;
+          height: 36px;
           border-radius: 50%;
           background: #f4f4f7;
           border: 1px solid rgba(0, 0, 0, 0.08);
@@ -335,7 +291,7 @@ export function Navbar({
           align-items: center;
           justify-content: center;
           cursor: pointer;
-          font-size: 18px;
+          font-size: 16px;
           line-height: 1;
         }
 
@@ -349,17 +305,17 @@ export function Navbar({
         .ftr-capsule-mobile-drawer {
           pointer-events: auto;
           position: fixed;
-          top: 86px;
-          left: 20px;
-          right: 20px;
+          top: 78px;
+          left: 16px;
+          right: 16px;
           background: #ffffff;
-          border-radius: 24px;
+          border-radius: 20px;
           border: 1px solid rgba(0, 0, 0, 0.08);
-          box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.14);
-          padding: 20px;
+          box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.14);
+          padding: 16px;
           display: flex;
           flex-direction: column;
-          gap: 8px;
+          gap: 6px;
           z-index: 998;
         }
 
@@ -371,10 +327,10 @@ export function Navbar({
         .ftr-mobile-drawer-item {
           background: transparent;
           border: none;
-          padding: 12px 16px;
-          border-radius: 12px;
-          font-size: 15px;
-          font-weight: 600;
+          padding: 11px 14px;
+          border-radius: 10px;
+          font-size: 14px;
+          font-weight: 550;
           color: #3f3f46;
           text-align: left;
           cursor: pointer;
@@ -401,7 +357,7 @@ export function Navbar({
         }
 
         /* ---------------- Responsive Breakpoints ---------------- */
-        @media (max-width: 960px) {
+        @media (max-width: 820px) {
           .ftr-center-capsule-track {
             display: none;
           }
@@ -413,17 +369,17 @@ export function Navbar({
         @media (max-width: 600px) {
           .ftr-agero-nav-wrapper {
             top: 12px;
-            padding: 0 12px;
+            padding: 0 10px;
           }
           .ftr-floating-capsule {
-            height: 54px;
+            height: 50px;
             padding: 4px 6px 4px 12px;
           }
           .ftr-brand-logo-img, .ftr-brand-svg-logo {
-            height: 32px;
+            height: 30px;
           }
           .ftr-capsule-cta-btn {
-            padding: 8px 14px;
+            padding: 7px 13px;
             font-size: 12px;
           }
         }
@@ -437,7 +393,7 @@ export function Navbar({
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
       >
-        {/* 1. Official FTR Logo (Image with crisp SVG fallback) */}
+        {/* 1. Official FTR Logo */}
         <a
           href="#home"
           className="ftr-brand-logo-link"
@@ -495,7 +451,7 @@ export function Navbar({
           )}
         </a>
 
-        {/* 2. Center: Gray Track with Sliding White Indicator */}
+        {/* 2. Center: Navigation Items */}
         <div className="ftr-center-capsule-track">
           {navItems.map((item) => {
             const isActive = activeTab === item.name;
@@ -509,7 +465,6 @@ export function Navbar({
               >
                 <span className="ftr-pill-text-label">{item.name}</span>
 
-                {/* Smooth Animated Spring White Pill */}
                 {isActive && (
                   <motion.div
                     layoutId="ftrActivePill"
@@ -526,37 +481,8 @@ export function Navbar({
           })}
         </div>
 
-        {/* 3. Right: Theme Toggle & Solid Black CTA */}
+        {/* 3. Right: CTA & Hamburger */}
         <div className="ftr-right-actions">
-          {/* Moon Theme Toggle Button */}
-          <button
-            type="button"
-            className="ftr-circle-theme-btn"
-            onClick={() => setIsDark((current) => !current)}
-            aria-label={isDark ? 'Switch to day theme' : 'Switch to night theme'}
-            aria-pressed={isDark}
-            title={isDark ? 'Switch to day theme' : 'Switch to night theme'}
-          >
-            {isDark ? (
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="5" />
-                <line x1="12" y1="1" x2="12" y2="3" />
-                <line x1="12" y1="21" x2="12" y2="23" />
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                <line x1="1" y1="12" x2="3" y2="12" />
-                <line x1="21" y1="12" x2="23" y2="12" />
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-              </svg>
-            ) : (
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-              </svg>
-            )}
-          </button>
-
-          {/* Solid Black Pill CTA */}
           <button
             type="button"
             className="ftr-capsule-cta-btn"
@@ -565,8 +491,8 @@ export function Navbar({
             <span>{ctaText}</span>
             <svg
               className="ftr-arrow-icon"
-              width="15"
-              height="15"
+              width="14"
+              height="14"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -579,7 +505,6 @@ export function Navbar({
             </svg>
           </button>
 
-          {/* Mobile Hamburger Toggle */}
           <button
             type="button"
             className="ftr-hamburger-toggle-btn"
@@ -616,11 +541,11 @@ export function Navbar({
             <button
               type="button"
               className="ftr-capsule-cta-btn"
-              style={{ width: '100%', justifyContent: 'center', marginTop: '10px', padding: '12px' }}
+              style={{ width: '100%', justifyContent: 'center', marginTop: '8px', padding: '11px' }}
               onClick={handleCtaClick}
             >
               <span>{ctaText}</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <line x1="7" y1="17" x2="17" y2="7" />
                 <polyline points="7 7 17 7 17 17" />
               </svg>

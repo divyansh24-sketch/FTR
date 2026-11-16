@@ -5,14 +5,12 @@ import { motion } from 'framer-motion';
 
 /**
  * =========================================================================
- * FTR SOLUTIONS - COMPACT LINEAR GRADIENT FOOTER (Footer.jsx)
+ * FTR SOLUTIONS - 4-COLUMN LINEAR GRADIENT FOOTER (Footer.jsx)
  * =========================================================================
- * - Tightened margins, compact gaps & sleek layout
+ * - 4-Column Layout: Brand | Menu | Chemical Systems | Get in Touch
+ * - Get in Touch includes Address, Phone, Email & Social Media with Icons + Names
  * - Continuous modern linear gradient background
- * - Official FTR Logo + Dark Pill CTA
- * - 4-Column compact hierarchy
  * - Massive signature "FTR" watermark typography
- * - 60FPS scroll up & scroll down animations
  * =========================================================================
  */
 
@@ -54,7 +52,7 @@ export default function Footer({ onExploreClick }) {
           left: 50%;
           transform: translateX(-50%) translateZ(0);
           width: 1000px;
-          height: 280px;
+          height: 300px;
           background: radial-gradient(
             ellipse at bottom center,
             rgba(226, 27, 34, 0.05) 0%,
@@ -67,16 +65,16 @@ export default function Footer({ onExploreClick }) {
         }
 
         .ftr-footer-container {
-          max-width: 1200px;
+          max-width: 1220px;
           margin: 0 auto;
           position: relative;
           z-index: 2;
         }
 
-        /* ---------------- Compact 4-Column Grid ---------------- */
+        /* ---------------- 4-Column Balanced Grid ---------------- */
         .ftr-footer-top-grid {
           display: grid;
-          grid-template-columns: 1.55fr 1fr 1fr 1fr;
+          grid-template-columns: 1.4fr 0.75fr 1.05fr 1.25fr;
           gap: 32px;
           margin-bottom: 24px;
         }
@@ -86,10 +84,9 @@ export default function Footer({ onExploreClick }) {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          gap: 10px;
+          gap: 12px;
         }
 
-        /* Official FTR Logo Link */
         .ftr-footer-logo-link {
           display: inline-flex;
           align-items: center;
@@ -112,21 +109,11 @@ export default function Footer({ onExploreClick }) {
           display: block;
         }
 
-        .ftr-fbrand-tagline {
-          font-size: 10.5px;
-          font-weight: 800;
-          color: #e21b22;
-          text-transform: uppercase;
-          letter-spacing: 0.8px;
-          font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-          margin: -4px 0 0;
-        }
-
         .ftr-fbrand-hero-title {
-          font-size: clamp(20px, 2.2vw, 26px);
+          font-size: clamp(19px, 2vw, 23px);
           font-weight: 850;
           color: #0f172a;
-          line-height: 1.2;
+          line-height: 1.25;
           letter-spacing: -0.03em;
           margin: 0;
         }
@@ -134,12 +121,11 @@ export default function Footer({ onExploreClick }) {
         .ftr-fbrand-summary {
           font-size: 13px;
           color: #64748b;
-          line-height: 1.5;
+          line-height: 1.55;
           margin: 0;
-          max-width: 360px;
+          max-width: 340px;
         }
 
-        /* Solid Black Pill CTA Button */
         .ftr-footer-pill-cta {
           background: #0f172a;
           color: #ffffff;
@@ -157,7 +143,6 @@ export default function Footer({ onExploreClick }) {
           text-decoration: none;
           font-family: inherit;
           margin-top: 2px;
-          transform: translateZ(0);
         }
 
         .ftr-footer-pill-cta:hover {
@@ -175,11 +160,10 @@ export default function Footer({ onExploreClick }) {
           transform: translate(2px, -2px);
         }
 
-        /* Meta credits */
         .ftr-fmeta-block {
           display: flex;
           flex-direction: column;
-          gap: 2px;
+          gap: 3px;
           font-size: 11.5px;
           color: #94a3b8;
           margin-top: 4px;
@@ -197,11 +181,11 @@ export default function Footer({ onExploreClick }) {
           color: #0f172a;
         }
 
-        /* Columns 2, 3, 4 (Links) */
+        /* Generic Column Styling */
         .ftr-fcol {
           display: flex;
           flex-direction: column;
-          gap: 10px;
+          gap: 12px;
         }
 
         .ftr-fcol-heading {
@@ -218,7 +202,7 @@ export default function Footer({ onExploreClick }) {
           margin: 0;
           display: flex;
           flex-direction: column;
-          gap: 8px;
+          gap: 9px;
         }
 
         .ftr-flink-btn {
@@ -235,7 +219,6 @@ export default function Footer({ onExploreClick }) {
           display: inline-flex;
           align-items: center;
           gap: 6px;
-          transform: translateZ(0);
         }
 
         .ftr-flink-btn:hover {
@@ -253,12 +236,115 @@ export default function Footer({ onExploreClick }) {
           letter-spacing: 0.3px;
         }
 
-        /* ---------------- MASSIVE FTR SIGNATURE TYPOGRAPHY ---------------- */
+        /* ---------------- Column 4: Get in Touch ---------------- */
+        .ftr-contact-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          font-size: 12.5px;
+          color: #475569;
+          line-height: 1.5;
+        }
+
+        .ftr-contact-icon {
+          width: 28px;
+          height: 28px;
+          border-radius: 8px;
+          background: rgba(255, 255, 255, 0.9);
+          border: 1px solid #e2e8f0;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          color: #0f172a;
+          flex-shrink: 0;
+          margin-top: 1px;
+        }
+
+        .ftr-contact-text {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+        }
+
+        .ftr-contact-text a {
+          color: #0f172a;
+          font-weight: 650;
+          text-decoration: none;
+          transition: color 0.18s ease;
+        }
+
+        .ftr-contact-text a:hover {
+          color: #e21b22;
+        }
+
+        .ftr-contact-subtext {
+          font-size: 11px;
+          color: #94a3b8;
+        }
+
+        /* Social Media Section */
+        .ftr-socials-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          margin-top: 4px;
+          padding-top: 10px;
+          border-top: 1px dashed rgba(226, 232, 240, 0.9);
+        }
+
+        .ftr-socials-title {
+          font-size: 11.5px;
+          font-weight: 700;
+          color: #64748b;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+
+        .ftr-socials-grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+        }
+
+        .ftr-social-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 6px 11px;
+          background: rgba(255, 255, 255, 0.85);
+          border: 1px solid #e2e8f0;
+          border-radius: 9999px;
+          font-size: 11.5px;
+          font-weight: 600;
+          color: #334155;
+          text-decoration: none;
+          transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+          box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+        }
+
+        .ftr-social-pill:hover {
+          background: #0f172a;
+          color: #ffffff;
+          border-color: #0f172a;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15);
+        }
+
+        .ftr-social-pill svg {
+          flex-shrink: 0;
+          transition: transform 0.2s ease;
+        }
+
+        .ftr-social-pill:hover svg {
+          transform: scale(1.1);
+        }
+
+        /* ---------------- Massive FTR Signature Watermark ---------------- */
         .ftr-massive-signature-wrap {
           width: 100%;
           text-align: center;
           position: relative;
-          margin-top: 0px;
+          margin-top: 8px;
           margin-bottom: -8px;
           user-select: none;
           pointer-events: none;
@@ -285,7 +371,7 @@ export default function Footer({ onExploreClick }) {
           transform: translateZ(0);
         }
 
-        /* Bottom Subline */
+        /* ---------------- Bottom Subline ---------------- */
         .ftr-footer-subline {
           display: flex;
           align-items: center;
@@ -322,16 +408,13 @@ export default function Footer({ onExploreClick }) {
         }
 
         /* ---------------- Responsive ---------------- */
-        @media (max-width: 960px) {
+        @media (max-width: 1040px) {
           .ftr-footer-top-grid {
             grid-template-columns: 1fr 1fr;
-            gap: 24px;
+            gap: 28px;
           }
           .ftr-fcol-brand {
             grid-column: 1 / -1;
-            max-width: 100%;
-          }
-          .ftr-fbrand-summary {
             max-width: 100%;
           }
         }
@@ -342,7 +425,7 @@ export default function Footer({ onExploreClick }) {
           }
           .ftr-footer-top-grid {
             grid-template-columns: 1fr;
-            gap: 20px;
+            gap: 24px;
           }
           .ftr-massive-text {
             font-size: clamp(75px, 24vw, 130px);
@@ -360,7 +443,7 @@ export default function Footer({ onExploreClick }) {
 
       <div className="ftr-footer-container">
         {/* =====================================================================
-            1. TOP 4-COLUMN COMPACT GRID
+            TOP 4-COLUMN GRID: Brand | Menu | Chemical Systems | Get in Touch
             ===================================================================== */}
         <div className="ftr-footer-top-grid">
           {/* Column 1: Brand & CTA */}
@@ -371,7 +454,6 @@ export default function Footer({ onExploreClick }) {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
           >
-            {/* Official FTR Logo (Same as Navbar) */}
             <a
               href="#home"
               className="ftr-footer-logo-link"
@@ -429,8 +511,6 @@ export default function Footer({ onExploreClick }) {
               )}
             </a>
 
-           
-
             <h3 className="ftr-fbrand-hero-title">
               Engineered for permanent structural protection.
             </h3>
@@ -451,7 +531,7 @@ export default function Footer({ onExploreClick }) {
             <div className="ftr-fmeta-block">
               <span>&copy; 2026 FTR Solutions Pvt. Ltd. All rights reserved.</span>
               <span className="ftr-fmeta-credit">
-                Engineered with <span style={{ color: '#e21b22' }}>❤️</span> in <strong>New Delhi, India</strong>
+                Made with <span style={{ color: '#e21b22' }}>❤️</span> by <strong>Devlofox</strong>
               </span>
             </div>
           </motion.div>
@@ -523,79 +603,13 @@ export default function Footer({ onExploreClick }) {
             </ul>
           </motion.div>
 
-          {/* Column 3: Navigation */}
+          {/* Column 3: Chemical Systems */}
           <motion.div
             className="ftr-fcol"
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-          >
-            <h4 className="ftr-fcol-heading">Navigation</h4>
-            <ul className="ftr-flinks-list">
-              <li>
-                <button
-                  type="button"
-                  className="ftr-flink-btn"
-                  onClick={() => scrollToSection('contact-section')}
-                >
-                  Contact
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className="ftr-flink-btn"
-                  onClick={() => scrollToSection('stats-section')}
-                >
-                  Engineering Playbook
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className="ftr-flink-btn"
-                  onClick={() => scrollToSection('solutions-section')}
-                >
-                  5-Step Method
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className="ftr-flink-btn"
-                  onClick={() => scrollToSection('contact-section')}
-                >
-                  Schedule On-Site Demo
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className="ftr-flink-btn"
-                  onClick={onExploreClick}
-                >
-                  Technical TDS Sheets
-                </button>
-              </li>
-              <li>
-                <a
-                  href="mailto:info@ftr.co.in"
-                  className="ftr-flink-btn"
-                >
-                  Customer Support
-                </a>
-              </li>
-            </ul>
-          </motion.div>
-
-          {/* Column 4: Chemical Systems */}
-          <motion.div
-            className="ftr-fcol"
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
           >
             <h4 className="ftr-fcol-heading">Chemical Systems</h4>
             <ul className="ftr-flinks-list">
@@ -658,10 +672,124 @@ export default function Footer({ onExploreClick }) {
               </li>
             </ul>
           </motion.div>
+
+          {/* Column 4: Get in Touch (Right of Chemical Systems) */}
+          <motion.div
+            className="ftr-fcol"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+          >
+            <h4 className="ftr-fcol-heading">Get in Touch</h4>
+
+            {/* Address */}
+            <div className="ftr-contact-item">
+              <div className="ftr-contact-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div className="ftr-contact-text">
+                <span> New Delhi - 110034</span>
+              </div>
+            </div>
+
+            {/* Phone */}
+            <div className="ftr-contact-item">
+              <div className="ftr-contact-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div className="ftr-contact-text">
+                <a href="tel:+911146205620">+91-11-46205620</a>
+                <span className="ftr-contact-subtext">Mon - Sat: 9:00 AM - 7:00 PM</span>
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="ftr-contact-item">
+              <div className="ftr-contact-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </div>
+              <div className="ftr-contact-text">
+                <a href="mailto:info@ftrsolutions.com">info@ftrsolutions.com</a>
+              </div>
+            </div>
+
+            {/* Social Media with Icons & Names */}
+            <div className="ftr-socials-wrapper">
+              <span className="ftr-socials-title">Follow Us</span>
+              <div className="ftr-socials-grid">
+                {/* LinkedIn */}
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ftr-social-pill"
+                  title="LinkedIn"
+                >
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z"/>
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+
+                {/* Instagram */}
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ftr-social-pill"
+                  title="Instagram"
+                >
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+
+                {/* X (Twitter) */}
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ftr-social-pill"
+                  title="X (Twitter)"
+                >
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                  <span>X</span>
+                </a>
+
+                {/* YouTube */}
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ftr-social-pill"
+                  title="YouTube"
+                >
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                  <span>YouTube</span>
+                </a>
+              </div>
+            </div>
+          </motion.div>
         </div>
 
         {/* =====================================================================
-            2. GIGANTIC "FTR" WATERMARK TYPOGRAPHY (Snug & Compact)
+            GIGANTIC "FTR" WATERMARK TYPOGRAPHY
             ===================================================================== */}
         <motion.div
           className="ftr-massive-signature-wrap"
@@ -674,7 +802,7 @@ export default function Footer({ onExploreClick }) {
         </motion.div>
 
         {/* =====================================================================
-            3. BOTTOM SUBLINE (Back to Top & Minimal Legal)
+            BOTTOM SUBLINE (Back to Top & Minimal Legal)
             ===================================================================== */}
         <div className="ftr-footer-subline">
           <div>

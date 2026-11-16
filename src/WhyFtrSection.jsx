@@ -22,7 +22,7 @@ const WHY_FTR_PILLARS = [
     tagline: 'Root-Cause Engineering',
     desc: 'We diagnose negative moisture and structural movement first. Never pushing standalone buckets off a shelf.',
     highlight: 'Zero shelf-pushing',
-    icon: '🎯',
+    icon: '',
   },
   {
     num: '02',
@@ -30,7 +30,7 @@ const WHY_FTR_PILLARS = [
     tagline: 'Material Responsibility',
     desc: 'Performance is engineered directly into our polymer matrix — forgiving on-site labor errors and mixing variances.',
     highlight: 'Site-tolerant formulation',
-    icon: '🛡️',
+    icon: '',
   },
   {
     num: '03',
@@ -38,7 +38,7 @@ const WHY_FTR_PILLARS = [
     tagline: 'Problem ➔ Diagnosis ➔ System',
     desc: 'Every recommendation follows a scientific 4-stage engineering protocol. Grounded in technical data, not guesswork.',
     highlight: '100% scientific protocol',
-    icon: '🔬',
+    icon: '',
   },
   {
     num: '04',
@@ -46,7 +46,7 @@ const WHY_FTR_PILLARS = [
     tagline: 'Multi-Layer Barrier',
     desc: 'Complete synchronized systems combining substrate primers, flexible elastomeric cores, and protective top-coats.',
     highlight: 'Multi-layer protection',
-    icon: '⚡',
+    icon: '',
   },
   {
     num: '05',
@@ -54,7 +54,7 @@ const WHY_FTR_PILLARS = [
     tagline: 'Proof Before Commitment',
     desc: 'We apply a live test patch directly onto your actual problem substrate to prove bonding and zero seepage before you order.',
     highlight: 'Live on-site test trial',
-    icon: '🧪',
+    icon: '',
   },
   {
     num: '06',
@@ -62,7 +62,7 @@ const WHY_FTR_PILLARS = [
     tagline: 'Zero Recurring Callbacks',
     desc: 'High-flex synthetic polymers and rust passivators engineered to permanently stop the cycle of annual monsoon repairs.',
     highlight: 'Permanent structural defense',
-    icon: '🏆',
+    icon: '',
   },
 ];
 
@@ -617,13 +617,21 @@ export default function WhyFtrSection({ onExploreClick }) {
           <div className="why-ftr-bracket">
            
           </div>
-          <h2 className="why-ftr-main-title">
-            <span className="why-ftr-dark-line">Built with Integrity.</span>
-            <span className="why-ftr-dim-gradient">Engineered to Never Fail.</span>
-          </h2>
-          <p className="why-ftr-lead">
-            We eliminate recurring structural failures at the substrate level. No rigid fillers, no guesswork, and zero seasonal callbacks.
-          </p>
+         <h2 className="why-ftr-main-title">
+  <span className="why-ftr-dark-line">Built on Trust.</span>
+  <span className="why-ftr-dim-gradient">
+    Designed for Lasting Strength.
+  </span>
+</h2>
+
+<p className="why-ftr-lead">
+  We deliver advanced construction solutions designed to
+  protect, strengthen, and enhance surfaces from the ground up.
+  Through quality formulations and innovative material
+  engineering, FTR provides dependable waterproofing,
+  corrosion protection, strong bonding, and lasting durability
+  for modern construction needs.
+</p>
         </div>
 
         {/* =====================================================================

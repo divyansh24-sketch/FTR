@@ -1058,15 +1058,7 @@ export default function SolutionSection({ onExploreClick }) {
             </h3>
           </div>
 
-          <motion.p
-            className="nx-section-hint"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: false }}
-            transition={{ duration: 0.3, delay: 0.15 }}
-          >
-            Hover any service to inspect chemistry &rarr;
-          </motion.p>
+         
         </div>
 
         {/* =====================================================================
@@ -1117,9 +1109,7 @@ export default function SolutionSection({ onExploreClick }) {
                   <span className="nx-rec-dot" />
                   <span>{activeItem.bracket}</span>
                 </span>
-                <span style={{ fontSize: '12px', color: '#64748b', fontWeight: 600 }}>
-                  Active System
-                </span>
+               
               </div>
 
               {/* Bucket Stage */}

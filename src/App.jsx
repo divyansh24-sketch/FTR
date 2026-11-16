@@ -6,8 +6,7 @@ import StatsSection from './StatsSection';
 import SolutionSecttion from './SolutionSection';
 import WhyFtrSection from './WhyFtrSection';
 
-import Ourclient from './Ourclient';
-import Testimonials from './Testimonials';  
+ 
 import Faq from './Faq';
 import Contact from './Contact';
 import Footer from './Footer';
@@ -21,8 +20,7 @@ export default function App() {
       <SolutionSecttion />
       <WhyFtrSection />
     
-      <Ourclient />
-      <Testimonials />
+      
       <Faq />
       <Contact />
       <Footer />
